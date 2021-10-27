@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,400;1,200;1,400&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&family=Rubik:wght@400;500&family=Space+Mono&display=swap');
+html {
+  background: #00002F
+}
+
+#chart-list-wrapper {
+  margin: auto;
+  max-width: 60rem;
+  width: border-box;
+}
+.chart {
+  position: relative;
+  display: flex;
+  padding: 20px;
+  font-family: 'Rubik';
+  color: white;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  background-color: #1f2423;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.artist {
+  color: #AAAAAA;
+  margin-bottom: 10px;
+}
+
+.charter {
+  font-size: 12px;
+}
+
+.timestamp {
+  position: absolute;
+  font-family: 'Space Mono';
+  top: 10px;
+  right: 10px;
+  text-align: right;
+  color: #AAAAAA;
+  font-size: 10px;
+}
+
+.sliding-background {
+  background-image: url("https://i.imgur.com/yGY6rSV.png");
+  height: 3840px;
+  width: 3840px;
+  right: 0px;
+  background-repeat: repeat-x;
+  animation: slide 5s linear infinite;
+}
+
+.sliding-background-wrapper {
+  position: fixed;
+  overflow: hidden;
+  transform: scale(1.1);
+  z-index: -1;
+}
+
+@keyframes slide{
+  0% {
+    transform: translate3d(-128px, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, -128px, 0);
+  }
+}
